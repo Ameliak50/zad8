@@ -1,12 +1,8 @@
 <resources>
-    <string name="app_name">My Application</string>
-    <string name="przywitanie">Witaj programisto</string>
-    <string name="przycisk1">przycisk 1</string>
-    <string name="przycisk2">przycisk 2</string>
-    <string name="przycisk3">przycisk 3</string>
-    <string name="przycisk4">dodaj</string>
-    <string name="przycisk5">odejmij</string>
-    <string name="przycisk6">zeruj</string>
-    <string name="licznik">0</string>
+
+    <string name="dostawa">dostawa</string>
+    <string name="dodatkowe_uslugi">dodatkowe uslugi</string>
+    <string name="opakowanie">opakowanie</string>
+
 
 </resources>

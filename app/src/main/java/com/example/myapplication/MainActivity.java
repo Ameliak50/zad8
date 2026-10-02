@@ -2,7 +2,10 @@ package com.example.myapplication;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,33 +26,34 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
     }
-    public void napiszCos (View view) {
-        TextView tekst = findViewById(R.id.napis1);
-        tekst.setText("kliknieto przycisk 1");
-    }
-    public void zmienTresc (View view) {
-        TextView tekst = findViewById(R.id.napis1);
-        tekst.setText("kliknieto przycisk 2");
-    }
-    public void przywroc (View view) {
-        TextView tekst = findViewById(R.id.napis1);
-        tekst.setText("Witaj programisto");
-    }
 
-    int liczba = 0;
-    public void dodaj (View view) {
-        liczba++;
-        TextView tekst = findViewById(R.id.napis2);
-        tekst.setText(String.valueOf(liczba));
-    }
-    public void odejmij (View view) {
-        liczba--;
-        TextView tekst = findViewById(R.id.napis2);
-        tekst.setText(String.valueOf(liczba));
-    }
-    public void zeruj (View view) {
-        liczba = 0;
-        TextView tekst = findViewById(R.id.napis2);
-        tekst.setText(String.valueOf(liczba));
+
+    int kwota = 0;
+    public void policz(View view) {
+        boolean checked = ((CheckBox) view).isChecked();
+        int idCheckBox = view.getId();
+        if (idCheckBox == R.id.dostawa){
+            if (checked) {
+                kwota = kwota + 10;
+            } else {
+                kwota = kwota - 10;
+            }
+        }
+        if (idCheckBox == R.id.platnosc){
+            if (checked) {
+                kwota = kwota + 5;
+            } else {
+                kwota = kwota - 5;
+            }
+        }
+        if (idCheckBox == R.id.opakowanie){
+            if (checked) {
+                kwota = kwota + 15;
+            } else {
+                kwota = kwota - 15;
+            }
+        }
+        TextView textView = findViewById(R.id.tekst);
+        textView.setText("Do zapłaty dodatkowo " + kwota + " złotych");
     }
 }

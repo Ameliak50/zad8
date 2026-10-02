@@ -10,44 +10,43 @@
 
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/przywitanie"
-        android:id="@+id/napis1"/>
-    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/przycisk1"
-        android:onClick="napiszCos"/>
-    <Button
+        android:id="@+id/tekst1"
+        android:text="@string/dodatkowe_uslugi"
+        android:textSize="12pt"
+        android:layout_marginTop="10dp"/>
+
+    <CheckBox
+        android:id="@+id/dostawa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/przycisk2"
-        android:onClick="zmienTresc" />
-    <Button
+        android:text="@string/dostawa"
+        android:textSize="12pt"
+        android:textColor="#6E2518"
+        android:onClick="policz"/>
+    <CheckBox
+        android:id="@+id/platnosc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/przycisk3"
-        android:onClick="przywroc" />
+        android:text="@string/dodatkowe_uslugi"
+        android:textSize="12pt"
+        android:textColor="#47B55B"
+        android:onClick="policz" />
+    <CheckBox
+        android:id="@+id/opakowanie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/opakowanie"
+        android:textSize="12pt"
+        android:textColor="#4792B5"
+        android:onClick="policz" />
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/licznik"
-        android:id="@+id/napis2"/>
-    <Button
+        android:id="@+id/tekst"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/przycisk4"
-        android:onClick="dodaj"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/przycisk5"
-        android:onClick="odejmij" />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/przycisk6"
-        android:onClick="zeruj" />
+        android:textSize="12pt"
+        android:text="" />
+
 
 </LinearLayout>
